@@ -13,6 +13,9 @@ spring:
     show-sql: true
     properties:
       hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
 
   servlet:
     multipart:
@@ -42,7 +45,7 @@ spring:
             scope:
               - email
               - profile
-            redirect-uri:  http://localhost:8080/login/oauth2/code/google
+            redirect-uri: ${OAUTH2_REDIRECT_URI}
 
 server:
   port: 8080
