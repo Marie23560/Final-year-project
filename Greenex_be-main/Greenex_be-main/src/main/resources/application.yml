@@ -1,6 +1,8 @@
 spring:
   application:
     name: GreenexProject
+  config:
+    import: "optional:file:.env[.properties]"
 
   datasource:
     url: ${DB_URL}
@@ -41,7 +43,7 @@ spring:
             scope:
               - email
               - profile
-            redirect-uri: ${OAUTH2_REDIRECT_URI}
+            redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
 
 server:
   port: 8080
