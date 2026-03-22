@@ -1,0 +1,28 @@
+# Compiled class file
+*.class
+
+# IDE
+.idea/
+*.iml
+
+# Maven
+target/
+
+# Logs
+*.log
+
+# Archives
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# JVM crash logs
+hs_err_pid*
+replay_pid*
+
+# Environment variables
+.env
